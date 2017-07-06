@@ -2,11 +2,13 @@
 <html>
 <head>
 	<title>CSS HTML Forms Lab</title>
+	<link href="https://fonts.googleapis.com/css?family=Proza+Libre:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<section id="main">
-		<section class="formSection container">
+		<section class="formSection-container">
 			<form class="form" method="GET">
 					<h1>My Dev Story</h1>
 					<div class="row formGroup">
@@ -34,7 +36,7 @@
 				    	</select>
 					</div>
 					<div class="row formGroup">
-				    	<label for="mission">Misison Statement:</label>
+				    	<label for="mission">Mission Statement:</label>
 				    	<textarea id="mission" name="mission"></textarea>
 					</div>
 
@@ -95,6 +97,11 @@
 
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+		// $("#button").on("hover", function() {
+		// 	$(this).css("background-color", "rgba(39, 208, 127, 1.0)");
+		// }, function() {
+		// 	$(this).css("background-color", "rgba(39, 208, 127, 0.5)");
+		// });
 
 		var main = $('#main');
 		function makeResults() {
@@ -109,7 +116,7 @@
 		var adjective2;
 		var noun1;
 		var noun2;
-	
+		
 
 		$("form").on("submit", function(event){
 		    
@@ -128,22 +135,22 @@
 			noun1 = $('input#noun-1').val();
 			noun2 = $('input#noun-2').val();
 
-		$( "<section class='container results'><h1>A True Story:</h1>" ).appendTo(main);
+		$( "<section class='container-results'><h1>A True Story:</h1>" ).appendTo(main);
 
 			var p1 = "Once upon a time there was a Developer named " +  name + ".";
-			main.append( "<p>" + p1 + "</p>");
+			$(".container-results").append( "<p>" + p1 + "</p>");
 
 			var p2 = name + " came to General Asssembly to " + verb1 + " the great mountain of programming knowledge.";
-			main.append( "<p>" + p2 + "</p>");	
+			$(".container-results").append( "<p>" + p2 + "</p>");	
 
 			var p3 = mission + ", " + name + " shouted.";
-			main.append( "<p>" + p3 + "</p>");
+			$(".container-results").append( "<p>" + p3 + "</p>");
 
 			var p4 = "Though " + sentiment + ", " + name + " was able to overcome all obstacles with the power of their " + noun1 + ".";
-			main.append( "<p>" + p4 + "</p>");
+			$(".container-results").append( "<p>" + p4 + "</p>");
 			
 			var p5 = "In the end, their success can be contributed entirely to their " + adjective2 + ", " + noun2 + ".";
-			main.append( "<p>" + p5 + "</p>");
+			$(".container-results").append( "<p>" + p5 + "</p>");
 
 		    makeResults();
 

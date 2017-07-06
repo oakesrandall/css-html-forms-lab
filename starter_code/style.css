@@ -1,8 +1,111 @@
 /*-------- Utility Styles --------*/
 * {
 	box-sizing: border-box; 
+	font-family: 'Proza Libre', sans-serif;
+	border-radius: 5px;
 	/* ^^^ Forces all elements to include content, padding, and border as part of their width/height calculation: 
 	http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+}
+
+#main {
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 10px 30px;
+	width: 100%;
+/*	display: inline-block;*/
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 10px 20px;
+}
+
+.formSection-container {
+	position: absolute;
+	right: 51%;
+	float: left;
+	margin: 0 auto;
+	width: 45%;
+	max-width: 500px;
+	background-color: #E3E6EC;
+	/*text-align: center;*/
+}
+
+.row {
+	padding: 10px 5px;
+	margin: 10px 20px;
+	display: block;
+	text-align: left;
+}
+
+.form-group {
+	display: inline-block;
+}
+
+.row label {
+	display: block;
+	padding: 10px 5px;
+}
+
+.radioButtons label {
+	display: inline-block;
+}
+
+.checkboxes label {
+	display: inline-block;
+}
+
+.container-results {
+	position: absolute;
+	left: 51%;
+	float: right;
+	width: 45%;
+	max-width: 500px;
+	background-color: #C8DBB3;
+}
+
+textarea#mission {
+	width: 100%;
+	height: 40px;
+}
+
+input#name {
+	width: 100%;
+	height: 40px;
+}
+
+input#noun-1 {
+	width: 100%;
+	height: 40px;
+}
+
+input#noun-2 {
+	width: 100%;
+	height: 40px;
+}
+
+select#verb-1 {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+}
+
+.container-results p {
+	margin: 10px 20px;
+}
+
+input[type="submit"] {
+	background-color: rgba(39, 208, 127, 0.5);
+	float: right;
+	height: 40px;
+	width: 85px;
+	margin: 10px 20px 30px 20px;
+	font-size: 20px;
+}
+
+input[type="submit"]:hover {
+	background-color: rgba(39, 208, 127, 1.0);
 }
 
 /* 
