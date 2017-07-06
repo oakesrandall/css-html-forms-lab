@@ -96,26 +96,10 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 
-		
-
-
-		// var adjective2 = $("input[name='adjective-2']:checked").map(
-  //    		function() {return this.value;}).get().join(', ');
-		// var noun1 = $('input#noun-1').val();
-
-
 		var main = $('#main');
 		function makeResults() {
 
 			event.preventDefault();
-
-			
-
-			// JS Native:
-			// var results = document.createElement('section');
-			// results.innerHTML = '<h1>' + 'A true story:' + '</h1>';
-			// results.className = 'container results';
-			// main.appendChild(results);
 		}
 
 		var name;
@@ -128,10 +112,7 @@
 	
 
 		$("form").on("submit", function(event){
-			console.log("user has submitted stuff!");
 		    
-		    
-
 		    function showCheckedValues() {	
 			return ($("input[name='adjective-2']:checked").map(
  			function () {
@@ -140,7 +121,6 @@
 		}
 
 			name = $('input#name').val();
-			console.log(name);
 			verb1 = $('#verb-1 option:selected').val();
 			mission = $('textarea#mission').val();
 			sentiment = $("input[name='sentiment']:checked").val();
@@ -152,43 +132,21 @@
 
 			var p1 = "Once upon a time there was a Developer named " +  name + ".";
 			main.append( "<p>" + p1 + "</p>");
+
 			var p2 = name + " came to General Asssembly to " + verb1 + " the great mountain of programming knowledge.";
 			main.append( "<p>" + p2 + "</p>");	
+
 			var p3 = mission + ", " + name + " shouted.";
 			main.append( "<p>" + p3 + "</p>");
+
 			var p4 = "Though " + sentiment + ", " + name + " was able to overcome all obstacles with the power of their " + noun1 + ".";
 			main.append( "<p>" + p4 + "</p>");
+			
 			var p5 = "In the end, their success can be contributed entirely to their " + adjective2 + ", " + noun2 + ".";
 			main.append( "<p>" + p5 + "</p>");
-			// $("section class='p1'><p>)
-
-
-
-			
 
 		    makeResults();
-	
-		  
-		   
-		    // Stop the form from submitting
 
-	    	// Run the 'makeResults' function seen above
-
-	    	/*
-			
-				For each value entered into a form input, add the input to the corresponding sentence, then append the text into the results section:
-
-				"Once upon a time there was a Developer named NAME."
-
-				"NAME came to General Asssembly to VERB1 the great mountain of programming knowledge."
-
-				""MISSION", NAME shouted."
-	
-				"Though SENTIMENT, NAME was able to overcome all obstacles with the power of their NOUN."
-
-				"In the end, their success can be contributed entirely to their " + ADJECTIVE2[list each one checked, comma-separated] + NOUN2."
-
-	    	*/ 
 		});
 	</script>
 
